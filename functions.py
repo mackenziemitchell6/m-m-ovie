@@ -1,2 +1,2 @@
-mack='mackkkk'
-movies='m-o-ovies'
+s = 'random string'
+str_list = s.split()

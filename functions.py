@@ -1,1 +1,2 @@
-oq = "I love burgers"
+s = 'random string'
+str_list = s.split()

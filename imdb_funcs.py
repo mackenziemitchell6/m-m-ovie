@@ -74,6 +74,19 @@ def get_ids_from_actor_list(names):
     return actor_id_list
 
 
+def get_id_from_actor_name(name):
+    BASE_URL = 'https://www.imdb.com/find?ref_=nv_sr_fn&q={}+{}'
+
+    first, last = name.split()
+    first = first.lower()
+    last = last.lower()
+    name_url = BASE_URL.format(first, last)
+    actor_soup = get_soup(name_url)
+    id = get_actor_id(actor_soup)
+
+    return id
+
+
 def parse_titles_and_ids(movie_list):
     """parse_title_and_ids(movie_list):
     Pull out the movie titles and ids from
